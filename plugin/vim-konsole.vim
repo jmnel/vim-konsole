@@ -1,3 +1,0 @@
-function! HeloWorld()
-    
-end func
