@@ -1,11 +1,13 @@
 "let s:currentFile=resolve(expand("<sfile>:p:h"))
 
+let s:pluginPath=resolve(expand("<sfile>:p:h"))
+
 function! s:setTitle()
     "echo expand('%:t')
     "echo s:currentFile
     let s:fileName=expand('%s:t')
     "echo s:fileName
-    silent execute '!./settitle.sh ' . s:fileName
+    silent execute '!' . s:pluginPath . '/settitle.sh ' . s:fileName
 endfunc
 
 function! s:idea()
